@@ -1,0 +1,596 @@
+body {
+
+margin: 0;
+font-family: 'Montserrat', sans-
+serif;
+font-size: 15px;
+line-height: 1.6;
+color: #333;
+}
+* {
+box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin: 0;
+}
+.container {
+width: 100%;
+max-width: 1280px;
+margin: 0 auto;
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+width: 100%;
+height: 100vh;
+
+background:
+url("../img/1669973236_1-pibig-info-p-krutoi-temnii-fon-pinterest-1.jpg") center no-repeat;
+-webkit-background-size: cover;
+background-size: cover;
+} 
+
+.intro_inner{
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro_title:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 40px auto;
+	background-color: #fff;
+
+}
+
+.intro_suptitle{
+	margin-bottom: 20px;
+	font-size: 72px;
+	color: white;
+	
+}
+
+.intro_title{
+	font-size: 150px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color:white;
+	text-align: center;
+	line-height: 1;
+}
+
+.header{
+	padding-top: 30px;
+	width: 100%;	
+	position:absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+.header_inner{
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+
+}
+.header_logo{
+	font-size: 40px;
+	font-weight: 800;
+	color:#fff;
+}
+nav{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.nav_link{
+	display: inline-block;
+	margin: 0px 15px;
+	color: #fff;
+	text-decoration: none;
+	transition: color .2s linear;
+position: relative;
+
+}
+.nav_link:after{
+	content:"";
+	display:block;
+	width: 100%;
+	height: 3px;
+	display: none;
+
+	background-color: #fce38a;
+	position: absolute;
+	top:100%;
+	left: 0;
+	z-index: 1;
+
+	}
+.nav_link:hover{
+	color: #fce38a;
+}
+.nav_link:hover:after{
+	display: block;
+}
+
+.bvf{
+	font-size: 14px;
+	border: 3px solid #fff;
+	text-transform: uppercase;
+	color:white;
+	display: inline-block;
+	vertical-align: text-top;
+	padding: 8px 30px;
+	font-weight: bold;
+	text-decoration: none;
+	transition: background .1s linear, color .1s linear;
+}
+.bvf:hover{
+	background: #fff;
+	color: #333;
+}
+
+.slider{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.slider_item{
+	width: 23%;
+	font-size: 18px;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px 0;
+	border-top: 2px solid #fff;
+	opacity: .7;
+}
+.slider_num{
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.slider_item.active{
+	opacity: 1;
+
+}
+.slider_item.active:before {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 3px;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	z-index: 1;
+	background-color: red;
+}
+
+.section{
+padding: 80px;
+}
+
+.section_header{
+	width: 100%;
+	max-width: 950px;
+	margin: 0 auto 50px;
+	text-align: center;
+}
+.section_suptitle{
+	font-size: 25px;
+	color: #333;
+	font-family:'Montserrat', sans-
+serif; 
+}
+.section_title{
+	font-size: 30px;
+	font-weight: 700;
+	color:#333;
+	text-transform: uppercase;
+}
+.section_title:after{
+content:"" ;
+display: block;
+width: 60px;
+height: 3px;
+margin: 30px auto;
+background-color: #f38181;
+}
+.section_text{
+color: #999;
+font-size: 15px;
+}
+.about{
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+.about_iteam{
+	width: 380px;
+	
+}
+.about_image{
+	background: linear-gradient(to bottom,#f38181, #fce38a);
+	transition: transform  .2s linear;
+}
+.about_iteam:hover .about_image img{
+	opacity: .1;
+	}
+
+	.about_iteam:hover .about_text{
+		opacity: 1;
+	}
+
+
+.about_image img{
+	display: block;
+	transition: opacity .1s linear;
+	}
+	.about_inner:hover .about_image{
+		transform: translate3d(-10px, -10px, 0px);
+	}
+	.about_text{
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 18px;
+		text-align: center;
+position: absolute;
+top: 50%;
+left: 0;
+z-index: 2;
+transform: translate3d(0, -50%, 0);
+width: 100%;
+opacity: 0;
+transition: opacity .2s linear;
+	}
+
+.static{
+	background-color: #95e1d3;
+	}
+	.stat{
+		display:flex;
+	}
+	.stat_item{
+		flex: 1 1 0;
+		border-left: 1px solid #b5eae0;
+		text-align: center;
+		color: #fff;
+		padding: 70px 25px;
+	}
+	.stat_item:last-child {
+		border-right:1px solid #b5eae0;
+	}
+.stat_count{
+	font-size: 72px;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 10px;
+	
+}
+.stat_text{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.services{
+		display:flex;
+	}
+	.services_item{
+	flex: 1 1 0;
+padding-left: 85px;
+position: relative;
+padding-right: 35px;
+	}
+.services_icon{
+width: 40px;
+height: 40px;
+position: absolute;
+top: 0;
+left: 28px;
+z-index: 1;
+}
+.services_title{
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.services_text{
+	font-size: 15px;
+	color: #999;
+}
+hr{
+	display: block;
+	width: 100%;
+	background-color: #e5e5e5;
+	margin: 40px 0;
+	height: 1px;
+}
+.section--devices{
+background: url("../img/изображение_viber_2023-07-17_16-42-13-264.jpg")
+center repeat;
+background-color: cover; 
+padding-bottom: 0;
+margin-bottom: 40px;
+}
+.devices{
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.d_item{
+	display: block;
+
+}
+.d_item--d_itemm{
+position: absolute;
+bottom: -80px;
+right: 0;
+z-index: 1;
+}
+.wedo{
+	display: flex;
+
+}
+.wedo-iteam{
+	width: 50%;
+}
+.img2{
+	width: 570px;
+	height: 380px;
+}
+.img3{
+width:40px ;
+height:40px ;
+position: absolute;
+top: 50%;
+left: 20px;
+z-index: 1;
+transform: translateY(-50%);
+}
+.accorgion_iteam{
+	border: 1px solid #e5e5e5;
+}
+
+
+.accorgion_header{
+	border-bottom: 1px solid #e5e5e5;
+	padding: 15px 20px 15px 65px;
+	position: relative;
+}
+.accorgion_content{
+	padding: 15px 20px;
+	font-size: 15px;
+	color: #999;
+	font-style: italic;
+
+}
+.accorgion_title{
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+}
+.accorgion{
+margin: 20px 0;
+}
+
+
+
+.section--gray{
+	background-color:#f8f8f8;
+}
+.reviews{
+	padding: 0 110px;
+
+}
+.reviews_item{
+padding-left: 205px;
+position: relative;
+}
+.img4{
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+}
+.reviews_text{
+	margin-bottom: 25px;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 300;
+	color: #999;
+
+}
+.reviews_author{
+	font-size: 24px;
+	color: black;
+
+}
+.reviews_author:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+	height: 3px;
+	background-color: #f38181;
+	margin-right: 10px;
+}
+
+.img6{
+	width: 400px;
+	height:350px;
+
+}
+
+.about_inner{
+	background-color: #95e1d3;
+	position: relative;
+}
+
+.info{
+	margin-top: 20px;
+	text-align: center;
+
+}
+.name{
+	text-transform: uppercase;
+color: black;
+font-size: 14px;
+margin-bottom: 5px;
+}
+.prof{
+color: #999;
+font-size: 15px;
+font-style: italic;
+font-weight: 300;
+}
+.logos{
+	display: flex;
+	justify-content: space-between;
+}
+.img7{
+	height: 50px;
+	width: 50px;
+	
+}
+	.img7:hover{
+		background: white;
+	}
+.about_twext{
+	background-color: #fce38a;
+	border-right: 1px solid red;
+	font-size: 30px;
+	text-decoration: none;
+	color: #f38181;
+	
+	line-height: 1;
+}
+.social{
+	display: flex;
+	justify-content: center;
+}
+
+.works{
+	display: flex;
+
+}
+.works_col{
+	flex: 1 1 0;
+}
+.img55{
+	width: 350px;
+	height: 250px;
+	transition: opacity .1s linear;
+	display: block;
+}
+.wotks_iteam{
+	position: relative;
+	background: linear-gradient(to bottom, #f38181 , #fce38a);
+}
+.wotks_iteam:hover .img55 {
+	opacity: .1;
+
+}
+
+.wotks_iteam:hover .works_info{
+	opacity: 1;
+
+
+}
+.works_info{
+	position: absolute;
+	top: 50%;
+	opacity: 0;
+width: 100%;
+	left: 0;
+	z-index: 1;
+	transform: translate3d(0, -50%, 0);
+	transition: opacity .2s linear;
+	text-align: center;
+	color: white;
+	padding: 0 15px;
+}
+.works_title{
+
+font-size: 14px;
+text-transform: uppercase;
+margin-bottom: 5px;
+}
+.works_text{
+font-size: 15px;
+font-weight: 300;
+font-style: italic;
+}
+.img555{
+	width: 350px;
+	height: 495px;
+}
+
+.wotks_iteam:hover .img555 {
+	opacity: .1;
+
+}
+.section--client{
+background: url("../img/изображение_viber_2023-07-17_16-42-13-264.jpg")
+center repeat;
+background-color: cover; 
+}
+
+.client{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 70px;
+	
+}
+.client_item{
+	width: 50%;
+	padding: 0 45px 0 175px;
+	position: relative;
+	margin-bottom: 60px;
+	background-size: cover;
+}
+.client_photo{
+	top: 0;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+
+	left:40px;
+	position: absolute;
+	z-index: 1;
+
+}
+.client_name{
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.client_prof{
+	font-size: 15px;
+	color: #333;
+	font-style: italic;
+	font-weight: 300;
+
+
+}
+.client_text{
+	font-size: 15px;
+	color: #999;
+
+}
+.client_text:before{
+	content: "";
+	display: block;
+	height: 3px;
+	width: 60px;
+	background: red;
+	margin: 15px 0;
+}
